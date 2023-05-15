@@ -13,10 +13,10 @@
         android:theme="@style/Theme.LatihanNewsAPI"
         tools:targetApi="31">
         <activity
-            android:name=".view.SourceActivity"
+            android:name=".ui.view.SourceActivity"
             android:exported="false" />
         <activity
-            android:name=".view.CategoryActivity"
+            android:name=".ui.view.CategoryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

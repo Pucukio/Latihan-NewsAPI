@@ -1,4 +1,4 @@
-package com.pucuk.latihan_newsapi.view
+package com.pucuk.latihan_newsapi.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,8 +7,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pucuk.latihan_newsapi.R
 import com.pucuk.latihan_newsapi.databinding.ActivitySourceBinding
-import com.pucuk.latihan_newsapi.view.adapter.SourceAdapter
-import com.pucuk.latihan_newsapi.viewmodel.SourceViewModel
+import com.pucuk.latihan_newsapi.ui.adapter.SourceAdapter
+import com.pucuk.latihan_newsapi.ui.viewmodel.SourceViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

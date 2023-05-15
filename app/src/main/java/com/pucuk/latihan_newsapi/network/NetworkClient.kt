@@ -37,6 +37,6 @@ object NetworkClient {
 
     @Singleton
     @Provides
-    fun provideNewsApi(retrofit: Retrofit): APIService =
-        retrofit.create(APIService::class.java)
+    fun provideNewsApi(retrofit: Retrofit): ApiService =
+        retrofit.create(ApiService::class.java)
 }

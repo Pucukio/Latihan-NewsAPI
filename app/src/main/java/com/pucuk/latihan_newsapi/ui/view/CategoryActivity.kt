@@ -1,4 +1,4 @@
-package com.pucuk.latihan_newsapi.view
+package com.pucuk.latihan_newsapi.ui.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.pucuk.latihan_newsapi.R
 import com.pucuk.latihan_newsapi.databinding.ActivityCategoryBinding
 import com.pucuk.latihan_newsapi.model.CategoryData
-import com.pucuk.latihan_newsapi.view.adapter.CategoryAdapter
+import com.pucuk.latihan_newsapi.ui.adapter.CategoryAdapter
 
 class CategoryActivity : AppCompatActivity() {
 

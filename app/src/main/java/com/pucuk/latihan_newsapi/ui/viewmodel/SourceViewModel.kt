@@ -1,9 +1,9 @@
-package com.pucuk.latihan_newsapi.viewmodel
+package com.pucuk.latihan_newsapi.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.pucuk.latihan_newsapi.model.Source
-import com.pucuk.latihan_newsapi.network.APIService
+import com.pucuk.latihan_newsapi.network.ApiService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -11,13 +11,9 @@ import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel
-class SourceViewModel @Inject constructor(var api: APIService): ViewModel() {
+class SourceViewModel @Inject constructor(var api: ApiService): ViewModel() {
 
-    lateinit var liveDataSource : MutableLiveData<List<Source>?>
-
-    init {
-        liveDataSource = MutableLiveData()
-    }
+    var liveDataSource : MutableLiveData<List<Source>?> = MutableLiveData()
 
     fun getDataSource(): MutableLiveData<List<Source>?> {
         return  liveDataSource

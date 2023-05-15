@@ -1,4 +1,4 @@
-package com.pucuk.latihan_newsapi.view.adapter
+package com.pucuk.latihan_newsapi.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,12 +13,12 @@ class CategoryAdapter(var listCategory : List<CategoryData> ): RecyclerView.Adap
 
     class ViewHolder(var binding : ItemCategoryBinding): RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var view = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CategoryAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.categoryName.text = listCategory[position].name
         Glide.with(holder.itemView).load(listCategory[position].picture).into(holder.binding.categoryImage)
         holder.binding.itemCategory.setOnClickListener {
