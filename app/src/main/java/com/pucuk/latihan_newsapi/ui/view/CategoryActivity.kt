@@ -11,8 +11,9 @@ import com.pucuk.latihan_newsapi.ui.adapter.CategoryAdapter
 
 class CategoryActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityCategoryBinding
-    lateinit var categoryAdapter  : CategoryAdapter
+    lateinit var binding: ActivityCategoryBinding
+    lateinit var categoryAdapter: CategoryAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryBinding.inflate(layoutInflater)
@@ -29,6 +30,7 @@ class CategoryActivity : AppCompatActivity() {
         )
 
         categoryAdapter = CategoryAdapter(listCategory)
+
         binding.rvCategory.apply{
             layoutManager = LinearLayoutManager(this@CategoryActivity, LinearLayoutManager.VERTICAL, false)
             adapter = categoryAdapter
@@ -42,6 +44,4 @@ class CategoryActivity : AppCompatActivity() {
 
 
     }
-
-
 }

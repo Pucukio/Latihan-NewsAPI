@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.pucuk.latihan_newsapi.databinding.ItemSourceBinding
-import com.pucuk.latihan_newsapi.model.Source
+import com.pucuk.latihan_newsapi.model.source.Source
 
 class SourceAdapter(var listSource : List<Source>): RecyclerView.Adapter<SourceAdapter.ViewHolder>() {
 

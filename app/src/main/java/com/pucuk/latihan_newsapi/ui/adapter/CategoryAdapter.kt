@@ -7,11 +7,13 @@ import com.bumptech.glide.Glide
 import com.pucuk.latihan_newsapi.databinding.ItemCategoryBinding
 import com.pucuk.latihan_newsapi.model.CategoryData
 
-class CategoryAdapter(var listCategory : List<CategoryData> ): RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+class CategoryAdapter(var listCategory: List<CategoryData>): RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     var onClick : ((CategoryData) -> Unit)? = null
 
-    class ViewHolder(var binding : ItemCategoryBinding): RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(var binding : ItemCategoryBinding): RecyclerView.ViewHolder(binding.root) {
+
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var view = ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -22,11 +24,12 @@ class CategoryAdapter(var listCategory : List<CategoryData> ): RecyclerView.Adap
         holder.binding.categoryName.text = listCategory[position].name
         Glide.with(holder.itemView).load(listCategory[position].picture).into(holder.binding.categoryImage)
         holder.binding.itemCategory.setOnClickListener {
-            onClick!!.invoke(listCategory[position])
+            this.onClick!!.invoke(listCategory[position])
         }
     }
 
     override fun getItemCount(): Int {
         return listCategory.size
     }
+
 }

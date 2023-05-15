@@ -1,6 +1,6 @@
 package com.pucuk.latihan_newsapi.network
 
-import com.pucuk.latihan_newsapi.model.Source
+import com.pucuk.latihan_newsapi.model.source.Source
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

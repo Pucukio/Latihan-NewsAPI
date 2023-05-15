@@ -2,7 +2,7 @@ package com.pucuk.latihan_newsapi.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.pucuk.latihan_newsapi.model.Source
+import com.pucuk.latihan_newsapi.model.source.Source
 import com.pucuk.latihan_newsapi.network.ApiService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call

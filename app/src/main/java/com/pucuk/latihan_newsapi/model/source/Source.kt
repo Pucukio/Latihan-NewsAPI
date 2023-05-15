@@ -1,4 +1,4 @@
-package com.pucuk.latihan_newsapi.model
+package com.pucuk.latihan_newsapi.model.source
 
 
 import com.google.gson.annotations.SerializedName
